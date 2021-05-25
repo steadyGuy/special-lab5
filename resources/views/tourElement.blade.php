@@ -10,6 +10,10 @@
         <h1 style="text-align: center;">
             {{$tour->title}} (@if($tour->isSpecial)<span style="color: red;">новинка<span>@endif)
         </h1>
+        <h3 style="text-align: center;">
+            {{-- Вместо tourType() (йгукн-игшдвук) используем свойство (belongsTo) --}}
+            {{$tour->tourType->title}}
+        </h3>
         <p style="text-align: center;">
             {{$tour->description}}
         </p>

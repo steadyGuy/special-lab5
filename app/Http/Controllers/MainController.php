@@ -23,32 +23,14 @@ class MainController extends Controller
         return view('toursList', compact('tours'));
     }
 
-    public function setOrderInfo(Request $request) {
-        //Валидируем request
-        // https://laravel.com/docs/8.x/validation
-
-        $request->validate([
-            'name' => 'required',
-            'mobile' => 'required|regex:/(0)[0-9]{9}/',
-        ]);
-
-        //queryBuilder can also be applied
-        $order = new Order();
-        $order->name = $request->name;
-        $order->mobile = $request->mobile;
-
-        $query = $order->save();
-
-        if($query) {
-            return back()->with('success', 'Вы успешно отправили письмо!');
-        } else {
-            return back()->with('fail', 'Что-то пошло не так'); //withInput
-        }
-    }
-
     public function getTourType($slug) {
         $tourType = TourType::where('slug', $slug)->first();
         return view('tourType', compact('tourType'));
+    }
+
+    public function getToursSpecial() {
+        $tours = Tour::where('isSpecial', 1)->limit(3)->get();
+        return view('tours', compact('tours'));
     }
 
     public function getTours() {
