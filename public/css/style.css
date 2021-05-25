@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    padding: 45px 90px;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list__item {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.burger-btn {
+    width: 25px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+.burger-btn span:after,
+.burger-btn span:before {
+    content: "";
+}
+
+.burger-btn span,
+.burger-btn span:after,
+.burger-btn span:before {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    transition: 0.3s;
+}
+
+.burger-btn span:before {
+    transform: translateY(-9px);
+}
+
+.burger-btn span:after {
+    transform: translateY(9px);
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: #fff;
+    line-height: 70px;
+    margin-bottom: 45px;
+}
+
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+    line-height: 45px;
+    margin-bottom: 100px;
+}
+
+.feedback-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-feedback {
+    text-decoration: none;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #efc42b;
+    border-radius: 50px;
+    padding: 20px 60px;
+    margin-right: 50px;
+}
+
+.feedback-btn p {
+    color: #a2a6b1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.gallery p {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.social img {
+    margin-right: 50px;
+}
+
+.gallery-items {
+    display: flex;
+    width: 70%;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card img:first-child {
+    width: 250px;
+}
+
+.card h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #fff;
+}
+
+.card p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+main {
+    padding: 100px 90px;
+}
+
+.all-toure {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 165px;
+}
+
+.img-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    background-size: cover;
+    padding: 25px 60px;
+}
+
+.img-block h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.img-block h3 span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.img-block p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+
+.bott {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.toure-info h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.toure-info p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 60px;
+}
+
+.toure-info a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #efc42b;
+    padding: 25px 60px;
+    border: 1px solid #efc42b;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.feedback-form {
+    background: url(img/bgForm.svg) no-repeat center;
+    background-size: cover;
+    padding: 48px 100px 48px 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.feedback-form h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.info p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+input {
+    padding: 25px 35px;
+    color: #adbfcf;
+    border-radius: 50px;
+    border: 1px solid #adbfcf;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+input[type="tel"] {
+    margin-bottom: 30px;
+}
+
+input[type="submit"] {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #000;
+    background-color: #efc42b;
+    height: 68px;
+    width: 228px;
+}
+
+form p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+}
+
+form p span {
+    color: #977c22;
+}
+
+.about-us {
+    background: url("img/imgHawaii\ 2.svg") no-repeat center;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    padding: 100px;
+    padding-top: 0;
+    justify-content: space-between;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.footer-info a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social img {
+    margin-right: 15px;
+}
+
+.media-hide {
+    display: none;
+}
+
+.burger-btn:hover,
+input[type="submit"]:hover,
+.feedback-btn img:hover,
+.social img:hover,
+.footer-social img:hover {
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+/* 993px - 1200px */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 45px 50px;
+    }
+
+    main {
+        padding: 70px 50px;
+    }
+
+    .card:last-child {
+        display: none;
+    }
+    .gallery-items {
+        width: 60%;
+    }
+
+    footer {
+        padding: 50px;
+    }
+
+    .footer-info p {
+        font-size: 14px;
+    }
+}
+
+/* 769px - 992px */
+@media screen and (max-width: 992px) {
+    .card:nth-child(2) {
+        display: none;
+    }
+
+    main {
+        padding: 50px 20px;
+    }
+
+    .toure-info {
+        text-align: center;
+    }
+
+    .img-block {
+        padding: 25px 30px;
+    }
+
+    .toure-info h2 {
+        font-size: 28px;
+    }
+
+    .feedback-form {
+        padding: 48px 100px 48px 20%;
+    }
+
+    .feedback-form h2 {
+        font-size: 26px;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .gallery-items {
+        justify-content: flex-end;
+    }
+}
+
+/* 577px - 768px */
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    header {
+        padding: 30px 10px;
+        background: url("img/mediaBgHeader.svg") no-repeat center;
+        background-size: cover;
+    }
+    .header img {
+        width: 100px;
+    }
+
+    .nav-list__item {
+        font-size: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        line-height: 46px;
+        margin-bottom: 25px;
+    }
+
+    header h2 {
+        font-size: 12px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .feedback-btn p,
+    .feedback-btn img,
+    .card:first-child,
+    .gallery-items,
+    footer,
+    .hide {
+        display: none;
+    }
+
+    .btn-feedback {
+        font-size: 12px;
+        padding: 10px 30px;
+    }
+
+    .gallery p {
+        font-size: 10px;
+    }
+
+    .social img {
+        margin-right: 15px;
+    }
+
+    .gallery {
+        justify-content: flex-end;
+    }
+
+    .all-toure {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .img-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .feedback-form {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        order: -1;
+        margin-bottom: 0;
+    }
+
+    .info p {
+        margin-bottom: 30px;
+        border-radius: 50px;
+    }
+
+    .about-us {
+        height: 500px;
+    }
+
+    .media-hide {
+        display: block;
+    }
+
+    .media-hide h2 {
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .media-hide h2 span {
+        color: #850708;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        width: 45%;
+        margin-right: 20px;
+        margin-bottom: 50px;
+    }
+
+    .flex-item h3 {
+        color: #1658b9;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .flex-item p {
+        color: #000;
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .watch-video img {
+        width: 45%;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .watch-video p {
+        color: #a2a6b1;
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        font-size: 14px;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .media-img {
+        background: url(img/imgIsland\ 1.png) no-repeat center;
+        background-size: cover;
+        padding: 10px 15px;
+        height: 150px;
+        position: relative;
+    }
+
+    .media-img h3 {
+        color: #fff;
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .media-arrow {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+    }
+
+    .flex-item p:nth-child(3) {
+        margin-top: 20px;
+    }
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+    nav {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .btn-feedback {
+        margin: 0 auto;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .feedback-form {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .img-block p {
+        font-size: 14px;
+    }
+
+    .flex-item {
+        width: 100%;
+        text-align: center;
+    }
+}

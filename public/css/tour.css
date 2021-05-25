@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    padding: 45px 90px;
+    background: url(img/background.svg) no-repeat center;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list__item {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.burger-btn {
+    width: 25px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+.burger-btn span:after,
+.burger-btn span:before {
+    content: "";
+}
+
+.burger-btn span,
+.burger-btn span:after,
+.burger-btn span:before {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    transition: 0.3s;
+}
+
+.burger-btn span:before {
+    transform: translateY(-9px);
+}
+
+.burger-btn span:after {
+    transform: translateY(9px);
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: #fff;
+    line-height: 70px;
+    margin-bottom: 45px;
+}
+
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+    line-height: 45px;
+    margin-bottom: 100px;
+}
+
+.feedback-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-feedback {
+    text-decoration: none;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #efc42b;
+    border-radius: 50px;
+    padding: 20px 60px;
+    margin-right: 50px;
+}
+
+.feedback-btn p {
+    color: #a2a6b1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.gallery p {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.social img {
+    margin-right: 50px;
+}
+
+.gallery-items {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card img:first-child {
+    width: 250px;
+}
+
+.card h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #fff;
+}
+
+.card p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+main {
+    padding-top: 50px;
+}
+
+main h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tour-info {
+    background-color: #98bde9;
+    padding: 50px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.tour-info-card {
+    width: 25%;
+    display: flex;
+    padding: 20px 20px;
+    background-color: #fff;
+    border: 1px solid #977778;
+}
+
+.tour-info-card img {
+    width: 25%;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.tour-info-card p {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.tour-info-card p span {
+    font-weight: 700;
+}
+
+.search-block {
+    padding-right: 50px;
+    text-align: end;
+    margin-bottom: 50px;
+}
+
+.btn-search {
+    border: 2px solid #a19f63;
+    background-color: #d98f00;
+    padding: 10px 45px;
+    text-decoration: none;
+    color: #000;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: end;
+}
+
+.hot-tour {
+    padding: 20px 50px;
+}
+
+.hot-tour h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hot-tour-block {
+    display: grid;
+    gap: 30px 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 50px;
+}
+
+.first-block,
+.second-block,
+.third-block {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.hot-tour-block__items {
+    height: 500px;
+    position: relative;
+}
+
+.first {
+}
+
+.second {
+    background: url(img/2.png) no-repeat center;
+    background-size: cover;
+}
+
+.third {
+    background: url(img/3.png) no-repeat center;
+    background-size: cover;
+}
+
+.fourth {
+    background: url(img/4.png) no-repeat center;
+    background-size: cover;
+}
+
+.fifth {
+    background: url(img/5.png) no-repeat center;
+    background-size: cover;
+}
+
+.sixth {
+    background: url(img/6.png) no-repeat center;
+    background-size: cover;
+}
+
+.seventh {
+    background: url(img/7.png) no-repeat center;
+    background-size: cover;
+}
+
+.eighth {
+    background: url(img/8.png) no-repeat center;
+    background-size: cover;
+}
+
+.nineth {
+    background: url(img/9.png) no-repeat center;
+    background-size: cover;
+}
+
+.stars-block {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.stars-block img {
+    width: 20px;
+    margin-left: -5px;
+}
+
+.hot-tour-block__items p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    bottom: 20%;
+    left: 10px;
+}
+
+.hot-tour-block__items a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+    background-color: #ff9900;
+    position: absolute;
+    bottom: 20%;
+    right: 10px;
+}
+
+.footer-card {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 20px 0;
+    background-color: rgba(125, 85, 85, 0.8);
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.point-block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-right: 10px;
+}
+
+.active-point {
+    background-color: #000;
+}
+
+.point:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+
+.point-block a {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    background-color: #ff9900;
+    margin-left: 20px;
+}
+
+/* RESPONSIVE */
+
+/* 993px - 1200px */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 45px 50px;
+    }
+
+    .card:last-child {
+        display: none;
+    }
+    .gallery-items {
+        width: 60%;
+    }
+
+    .tour-info {
+        flex-wrap: wrap;
+    }
+
+    .tour-info-card {
+        width: 50%;
+    }
+
+    .hot-tour-block__items {
+        width: 33%;
+    }
+}
+
+/* 769px - 992px */
+@media screen and (max-width: 992px) {
+    .card:nth-child(2) {
+        display: none;
+    }
+
+    .gallery-items {
+        justify-content: center;
+    }
+
+    .hot-tour-block {
+        flex-direction: column;
+    }
+
+    .hot-tour-block__items {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* 577px - 768px */
+@media screen and (max-width: 768px) {
+    .header img {
+        width: 100px;
+    }
+
+    .nav-list__item {
+        font-size: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        line-height: 46px;
+        margin-bottom: 25px;
+    }
+
+    header h2 {
+        font-size: 12px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .feedback-btn p,
+    .feedback-btn img,
+    .card:first-child,
+    .gallery-items,
+    footer,
+    .hide {
+        display: none;
+    }
+
+    .btn-feedback {
+        font-size: 12px;
+        padding: 10px 30px;
+    }
+
+    .gallery p {
+        font-size: 10px;
+    }
+
+    .social img {
+        margin-right: 15px;
+    }
+
+    .gallery {
+        justify-content: flex-end;
+    }
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+    nav {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .btn-feedback {
+        margin: 0 auto;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .tour-info {
+        padding: 10px;
+    }
+
+    .tour-info-card {
+        width: 100%;
+    }
+
+    .hot-tour {
+        padding: 10px;
+    }
+
+    .point-block {
+        padding-right: 10px;
+    }
+}
