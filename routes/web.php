@@ -24,11 +24,3 @@ Route::get('/tours', [MainController::class, 'getTours'])->name("tours");
 Route::get('/tours/{slug}', [MainController::class, 'getTour']);
 
 Route::post('/send-order', [MainController::class, 'setOrderInfo']);
-
-// Route::get('login', [UserAuthController::class, 'login'])->middleware('alreadyLogged');
-// Route::get('register', [UserAuthController::class, 'register'])->middleware('alreadyLogged');
-// Route::post('create', [UserAuthController::class, 'create'])->name('auth.create');
-// Route::post('check', [UserAuthController::class, 'check'])->name('auth.check');
-// Route::get('profile', [ProfileController::class, 'profile'])->middleware('isLogged');
-// Route::get('logout', [UserAuthController::class, 'logout']);
-// Route::get('/', [HomePageController::class, 'data']);
